@@ -1,1 +1,1 @@
-# startup for Stephen Brockbank. This will be my final project for cs260 class.
+# startup for Stephen Brockbank. This will be my final project for cs260 class. This will be awesome.
