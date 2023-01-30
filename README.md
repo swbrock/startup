@@ -21,3 +21,7 @@ On the event page - it will display the title at the top as well as the users wh
 Friend Page: 
 Here the user can add users to their friend group or family group. 
 
+
+
+URL: http://3.12.97.31/
+ssh -i ~/Downloads/production.pem ubuntu@3.12.97.31
