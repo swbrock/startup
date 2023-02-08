@@ -25,7 +25,7 @@ Here the user can add users to their friend group or family group.
 
 
 Simon - learning:
-Now I know how to make subdomains for my project. Honestly not entirely sure that's what I did, but it seems that way. Really easy to do. Also, very easy to create different pages and have links to them inside each page.
+Now I know how to make subdomains for my project. Honestly not entirely sure that's what I did, but it seems that way. Really easy to do. Also, very easy to create different pages and have links to them inside each page. The deployWebsites.sh file is amazing. It really does all the work. Github desktop is also very user friendly. Making pull requests or pushing commits is very intuitive. It took me a second to get my simon deployed becasue I wasn't naming my files correctly. So that was interesting. I need to take a closer look at the deployWebsites.sh file to know why that was not working. Once I changed the file names it worked great.
 
 
 
