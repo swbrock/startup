@@ -23,5 +23,11 @@ Here the user can add users to their friend group or family group.
 
 
 
+
+Simon - learning:
+Now I know how to make subdomains for my project. Honestly not entirely sure that's what I did, but it seems that way. Really easy to do. Also, very easy to create different pages and have links to them inside each page.
+
+
+
 URL: http://3.12.97.31/
 ssh -i ~/Downloads/production.pem ubuntu@3.12.97.31
