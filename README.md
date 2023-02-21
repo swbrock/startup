@@ -29,5 +29,9 @@ Now I know how to make subdomains for my project. Honestly not entirely sure tha
 
 
 
+Simon - CSS
+What I really learned here was that it is difficult to make the website appear the way you envision it. It's important to deploy often to see what it actually looks like, instead of doing it all blind. I spent too much time changing things when they didn't even look good.
+
+
 URL: http://3.12.97.31/
 ssh -i ~/Downloads/production.pem ubuntu@3.12.97.31
