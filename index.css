@@ -52,7 +52,7 @@ body {
 /* Style for the main content */
 .main-content {
 	margin-left: 200px;
-	padding: 20px;
+	padding: 10px;
 }
 
 /* Style for the background image */
@@ -69,53 +69,38 @@ body {
 }
 
 .h1 {
-    font-size: 50px;
+    font-size: 100px;
 }
 .h2 {
-    font-size: 30px;
+    font-size: 50px;
 }
 .h3 {
-    font-size: 20px;
+    font-size: 25px;
 }
 
 /* Style for the footer */
-.footer {
+footer {
     display: flex;
-    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: #fff;
     padding: 20px;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-}
-
-/* CSS for the footer sections */
-.footer-section {
-    flex: 1;
-    padding: 20px;
+  }
+  
+  .footer-section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-}
-
-.footer-section h2 {
-    margin-top: 0;
-    margin-bottom: 10px;
-}
-
-.footer-section img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    margin-bottom: 10px;
-}
-
-.footer-section p {
-    margin: 0;
     text-align: center;
-    line-height: 1.5;
-}
+    width: 50%;
+  }
+  
+  .footer-section img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
 
     
 /* Media queries */
@@ -128,6 +113,9 @@ body {
     .main-content {
         margin-left: 0;
     }
+    .footer-section {
+        width: 100%;
+      }
 }
     
 @media screen and (max-width: 480px) {
