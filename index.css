@@ -114,6 +114,21 @@ footer {
 	padding: 10px;
   }
 
+
+    /* Style for the photo gallery title */
+.gallery-container .gallery-title {
+       width: 100%;
+       text-align: center;
+       margin-bottom: 20px;
+  }
+
+.gallery-container h1 {
+    font-size: 100px;
+    color: darkblue;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
   /* Style for each photo box */
   .photo-box {
     width: 300px;
