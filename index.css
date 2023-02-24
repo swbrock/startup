@@ -51,16 +51,13 @@ body {
 
 /* Style for the main content */
 .main-content {
-	margin-left: 200px;
+	margin-bottom: 1px;
 }
 
 /* Style for the background image */
 .background-image {
 	background-image: url(background.jpg);
-	background-position: center;
-	background-size: cover;
 	height: calc(100vh - 60px); /* subtract the height of the toolbar */
-	display: flex;
 	align-items: center;
 	justify-content: center;
 	color: darkblue;
@@ -69,13 +66,12 @@ body {
 
 .background-form {
     background-image: url(background.jpg);
-	background-position: center;
-	background-size: cover;
-	height: 100%;
 	align-items: center;
 	justify-content: center;
 	color: darkblue;
 	text-align: center;
+    margin-left: 200px;
+    padding: 5px;
 }
 
 .form-title {
@@ -95,13 +91,94 @@ body {
     font-size: 25px;
 }
 
+.media-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 30px;
+  }
+  
+  .media-gallery img,
+  .media-gallery video {
+    margin: 5px;
+    border-radius: 5px;
+  }
+  
+  /* Style the text entries */
+  .text-entries {
+    margin-top: 30px;
+  }
+  
+  .text-entries p {
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+.event-info {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+    padding: 10px;
+    color: darkblue;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.event-info .left {
+        position: relative;
+        left: 0;
+        margin: 0;
+}
+
+.event-info .right {
+        position: relative;
+        right: 0;
+        margin: 0;
+}
+
+.event-info .center {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+}
+
 /* Style for the footer */
 footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: #fff;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
     background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .contact-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .contact-info p {
+    margin: 0 10px;
+    font-size: 14px;
+  }
+  
+  .contact-info i {
+    margin-right: 5px;
+    font-size: 16px;
   }
   
   .footer-section {
@@ -132,6 +209,27 @@ footer {
     margin-bottom: 10px;
   }
 
+  .button-row {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #040766;
+    color: #4478d2;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 0 10px;
+    font-size: 30px;
+  }
+  
+  .button:hover {
+    background-color: #0c033b;
+  }
+  
 /* Style for the container of the photo gallery */
 .gallery-container {
     display: flex;
