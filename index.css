@@ -52,7 +52,6 @@ body {
 /* Style for the main content */
 .main-content {
 	margin-left: 200px;
-	padding: 10px;
 }
 
 /* Style for the background image */
@@ -102,7 +101,6 @@ footer {
     justify-content: space-between;
     align-items: center;
     color: #fff;
-    padding: 10px;
     background-color: #333;
   }
   
@@ -119,6 +117,19 @@ footer {
     height: auto;
     margin-bottom: 10px;
     padding: 10px;
+  }
+
+  .contact-info {
+    margin: 0 auto;
+    max-width: 600px;
+  }
+  
+  .contact-info h3 {
+    margin-top: 0;
+  }
+  
+  .contact-info p {
+    margin-bottom: 10px;
   }
 
 /* Style for the container of the photo gallery */
