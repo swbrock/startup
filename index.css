@@ -21,6 +21,7 @@ body {
 	margin-right: 10px;
 }
 
+
 /* Style for the sidebar */
 .sidebar {
 	background-color: #f2f2f2;
@@ -121,32 +122,101 @@ body {
     width: 100%;
     display: flex;
     flex-direction: row;
-    margin: 10px;
+    margin: 0 auto;
     padding: 10px;
     color: darkblue;
     border: 1px solid #ccc;
     border-radius: 5px;
     background-color: rgba(255, 255, 255, 0.5);
+    font-size: 20px;
 }
 
-.event-info .left {
-        position: relative;
-        left: 0;
-        margin: 0;
+.upload {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    padding: 10px;
+    color: darkblue;
 }
 
-.event-info .right {
-        position: relative;
-        right: 0;
-        margin: 0;
+.left {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-.event-info .center {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+.right {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.center {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .profile-pic {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 20px;
+  }
+  
+  .profile-pic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .profile-info {
+    text-align: center;
+  }
+  
+  h1, h2, p, li {
     margin: 0;
-}
+    padding: 0;
+  }
+  
+  h1[contenteditable], h2[contenteditable], p[contenteditable], span[contenteditable] {
+    border: 2px solid #ccc;
+    padding: 5px;
+    margin-bottom: 10px;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  li {
+    margin-bottom: 10px;
+  }
+  
+  li strong {
+    display: inline-block;
+    width: 100px;
+  }
+  
+
 
 /* Style for the footer */
 footer {

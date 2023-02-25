@@ -27,36 +27,33 @@
 		</ul>
 	</div>
     <div class="gallery-container">
-  <h1>Event Title</h1>
-  <div class="event-info">
-    <div class="left">
-        <p>Start Date: January 1, 2023</p>
-    </div>
-    <div class="middle">
-        <p>Location: Provo, UT</p>
-    </div>
-    <div class="right">
-        <p>End Date: January 5, 2023</p>
-    </div>
+        <h1>Event Title</h1>
+        <div class="event-info">
+            <p class="left">Start Date: January 1, 2023</p>
+            <p class="center">Location: Provo, UT</p>
+            <p class="right">End Date: January 5, 2023</p>
+        </div>
+  
+    <div class="upload">
+        <form>
+            <h2>Upload Photos</h2>
+            <input type="file" name="photos" accept="image/*">
+            <button type="submit">Upload</button>
+          </form>
+          
+          <form>
+            <h2>Upload Videos</h2>
+            <input type="file" name="videos" accept="video/*">
+            <button type="submit">Upload</button>
+          </form>
+          
+          <form>
+            <h2>Enter Journal Entry</h2>
+            <textarea name="text"></textarea>
+            <button type="submit">Submit</button>
+          </form>
     </div>
   
-  <form>
-    <h2>Upload Photos</h2>
-    <input type="file" name="photos" accept="image/*">
-    <button type="submit">Upload</button>
-  </form>
-  
-  <form>
-    <h2>Upload Videos</h2>
-    <input type="file" name="videos" accept="video/*">
-    <button type="submit">Upload</button>
-  </form>
-  
-  <form>
-    <h2>Enter Text</h2>
-    <textarea name="text"></textarea>
-    <button type="submit">Submit</button>
-  </form>
   
   <h2>Photos and Videos</h2>
   <div class="media-gallery">
@@ -65,7 +62,7 @@
     <video src="video1.mp4" controls></video>
   </div>
   
-  <h2>Text Entries</h2>
+  <h2>Journal Entries</h2>
   <div class="text-entries">
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
     <p>Nulla auctor mi at nisi ullamcorper, ac varius enim euismod.</p>
