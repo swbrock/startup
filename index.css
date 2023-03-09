@@ -216,6 +216,61 @@ body {
     width: 100px;
   }
   
+  .friend-requests {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .friend-requests li {
+    display: flex;
+    margin-bottom: 20px;
+  }
+  
+  .profile-pic {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 10px;
+  }
+  
+  .profile-pic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .profile-info {
+    flex-grow: 1;
+  }
+  
+  .profile-info h2, .profile-info p {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .buttons {
+    display: flex;
+    margin-top: 10px;
+  }
+  
+  .accept, .reject {
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    margin-right: 10px;
+  }
+  
+  .accept {
+    color: #fff;
+    background-color: #42b72a;
+  }
+  
+  .reject {
+    color: #666;
+    background-color: #e9ebee;
+  }
 
 
 /* Style for the footer */
