@@ -3,6 +3,38 @@
 <head>
 	<title>The Waal</title>
 	<link rel="stylesheet" type="text/css" href="index.css">
+	<script src="login.js"></script>
+	<script>
+		function login() {
+		  const nameEl = document.querySelector("#name");
+		  localStorage.setItem("userName", nameEl.value);
+		  window.location.href = "index.html";
+		}
+  
+		function logout() {
+		  localStorage.removeItem("userName");
+		  window.location.href = "login.html";
+		}
+  
+		function getUserName() {
+		  return localStorage.getItem("userName") ?? "Anonymous";
+		}
+  
+		//show logout button if user is logged in
+		if (getUserName() !== "Anonymous") {
+		  document.querySelector("#logout").style.display = "block";
+		}
+  
+		//show login button if user is logged out
+		if (getUserName() === "Anonymous") {
+		  document.querySelector("#login").style.display = "block";
+		}
+  
+		//show username if user is logged in
+		if (getUserName() !== "Anonymous") {
+		  document.querySelector("#username").innerHTML = getUserName();
+		}
+	  </script>
 </head>
 <body>
 	<!-- Toolbar -->
@@ -13,8 +45,15 @@
 			<a href="friends.html">Friends</a>
 		</div>
 		<div class="right-links">
-			<a href="#">Logout</a>
-		</div>
+			<span id="username"></span>
+			<script>
+				function getUserName() {
+					return localStorage.getItem("userName") ?? "Anonymous";
+				}
+			</script>
+			<button id="logout" style="display:none;" onclick="logout()">Logout</button>
+			<button id="login" style="display:none;" onclick="login()">Login</button>
+		  </div>
 	</div>
 
 	<!-- Sidebar -->
@@ -32,6 +71,11 @@
 		<!-- Background image -->
 		<div class="background-image">
 			<h1>The Waal</h1>
+      		<form>
+        		<label for="name">Username:</label>
+        		<input type="text" id="name" name="name" />
+        		<button type="button" onclick="login()">Login</button>
+      		</form>
             <div class="button-row">
                 <a href="yourWaal.html" class="button">Your Waal</a>
                 <a href="familyWaal.html" class="button">Family Waal</a>

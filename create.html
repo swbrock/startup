@@ -30,7 +30,7 @@
         <div class="form-title">
             <h1>Create New Event</h1>
         </div>
-        <form>
+        <form id="event-form">
             <label for="title">Title:</label>
             <input type="text" id="title" name="title"><br><br>
     
@@ -74,6 +74,47 @@
       </div>
     </div>
   </footer>
+  <script>
+    async function saveToLocalStorage(event) {
+      event.preventDefault(); // prevent default form submission
+      
+      // get form values
+      const title = document.getElementById("title").value;
+      const startDate = document.getElementById("start_date").value;
+      const endDate = document.getElementById("end_date").value;
+      const image_url = document.getElementById("pictures").value;
+      const video_url = document.getElementById("videos").value;
+      const users = document.getElementById("dummy_users").selectedOptions;
+      const options = document.getElementById("options").value;
+      
+      // create event object
+      const eventObj = {
+        title,
+        startDate,
+        endDate,
+        image_url,
+        video_url,
+        users: Array.from(users).map(user => user.value),
+        options
+      };
+      
+      // save event to local storage
+      let events = JSON.parse(localStorage.getItem("eventsPics")) || [];
+      events.push(eventObj);
+      localStorage.setItem("eventsPics", JSON.stringify(events));
+      console.log(events)
+      
+      // redirect to home page
+      window.location.href = "create.html";
+    }
+      
+    // add event listener to form submission
+    async function main() {
+      const form = document.querySelector("form");
+      await form.addEventListener("submit", saveToLocalStorage);
+    }
   
-  
+    main();    
+  </script>  
 </html>
+

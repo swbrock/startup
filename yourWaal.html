@@ -3,6 +3,7 @@
 <head>
     <title>The Waal</title>
     <link rel="stylesheet" type="text/css" href="index.css">
+    <script src="yourWaal.js"></script>
 </head>
 
 <body>
@@ -14,6 +15,8 @@
 			<a href="friends.html">Friends</a>
 		</div>
 		<div class="right-links">
+      <div class="username">
+      </div>
 			<a href="#">Logout</a>
 		</div>
 	</div>
@@ -32,38 +35,60 @@
         <div class="gallery-title">
             <h1>Your Waal</h1>
         </div>
-      <div class="photo-box">
-        <img src="yourWaalPics\1631835325773.jpg" alt="Photo 1" />
-        <div class="photo-title"><a href="event.html">First Day Of Business School</a></div>
-      </div>
-      <div class="photo-box">
-        <img src="yourWaalPics\GIWT7462.JPG" alt="Photo 2" />
-        <div class="photo-title"><a href="event.html">Eternal Families with the Cousins</a></div>
-      </div>
-      <div class="photo-box">
-        <img src="yourWaalPics\IMG_0013.JPG" alt="Photo 3" />
-        <div class="photo-title"><a href="event.html">Oregon Coast Waterfall</a></div>
-      </div>
-      <div class="photo-box">
-        <img src="yourWaalPics\IMG_0017.JPG" alt="Photo 4" />
-        <div class="photo-title"><a href="event.html">Oregon Coast Ice Cream</a></div>
-      </div>
-      <div class="photo-box">
-        <img src="yourWaalPics\IMG_0344.JPEG" alt="Photo 5" />
-        <div class="photo-title"><a href="event.html">Ski Trip</a></div>
-      </div>
-      <div class="photo-box">
-        <img src="yourWaalPics\SLUO6054.JPG" alt="Photo 6" />
-        <div class="photo-title"><a href="event.html">Workout with Samuel</a></div>
-      </div>
         <div class="photo-box">
-            <img src="yourWaalPics\SLUO6054.JPG" alt="Photo 7" />
-            <div class="photo-title"><a href="event.html">Workout with Samuel</a></div>
-            </div>
+        </div>
         <div class="photo-box">
-            <img src="yourWaalPics\SLUO6054.JPG" alt="Photo 8" />
-            <div class="photo-title"><a href="event.html">Workout with Samuel</a></div>
-            </div>
+        </div>
+        <div class="photo-box">
+        </div>
+        <div class="photo-box">
+        </div>
+        <div class="photo-box">
+        </div>
+        <div class="photo-box">
+        </div>
+        <div class="photo-box">
+        </div>
+        <div class="photo-box">
+        </div>
     </div>
+
+    <script>
+        // retrieve events from local storage
+        const usernameID = localStorage.getItem("userName");
+        const username = document.querySelector(".username");
+        console.log(usernameID);
+        
+        const events = JSON.parse(localStorage.getItem("eventsPics")) || [];
+
+        // loop through events and display the first picture in each event
+        const photoBoxes = document.querySelectorAll(".photo-box");
+        for (let i = 0; i < Math.min(events.length, 8); i++) {
+          console.log(events[i]);
+            const event = events[i];
+            const photoBox = photoBoxes[i];
+            const imageSrc = event.image_url || "yourWaalPics\IMG_0017.JPG"; // replace with default image path
+            const photoTitle = event.name || "Untitled Event"; // replace with default title
+            const startDate = event.start_date || "Unknown Start Date"; // replace with default start date
+            const endDate = event.end_date || "Unknown End Date"; // replace with default end date
+
+            const imageElement = document.createElement("img");
+            imageElement.setAttribute("src", imageSrc);
+            imageElement.setAttribute("alt", photoTitle);
+            photoBox.appendChild(imageElement);
+
+            const photoTitleElement = document.createElement("div");
+            photoTitleElement.classList.add("photo-title");
+            const titleLink = document.createElement("a");
+            titleLink.setAttribute("href", "event.html");
+            titleLink.innerText = photoTitle;
+            photoTitleElement.appendChild(titleLink);
+            photoBox.appendChild(photoTitleElement);
+
+            const dateElement = document.createElement("div");
+            dateElement.innerText = `${startDate} - ${endDate}`;
+            photoBox.appendChild(dateElement);
+        }
+    </script>
 </body>
 </html>

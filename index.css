@@ -66,14 +66,32 @@ body {
 }
 
 .background-form {
-    background-image: url(background.jpg);
+  background-image: url(background.jpg);
 	align-items: center;
 	justify-content: center;
 	color: darkblue;
 	text-align: center;
-    margin-left: 200px;
-    padding: 5px;
+  margin-left: 200px;
+  padding: 5px;
 }
+
+/* Adjust size of login elements */
+.background-image input[type="text"] {
+  width: 150px;
+  height: 30px;
+  font-size: 16px;
+  margin: 0 auto;
+  padding: 0 10px;
+  margin-bottom: 10px;
+}
+
+.background-image button {
+  height: 30px;
+  font-size: 16px;
+  padding: 0 10px;
+  margin-bottom: 10px;
+}
+
 
 .form-title {
     font-size: 50px;
