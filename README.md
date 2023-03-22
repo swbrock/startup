@@ -35,6 +35,9 @@ What I really learned here was that it is difficult to make the website appear t
 Simon - JS
 Some things I learned from this is to just be careful to use the correct id names. The play wasn't working for awhile because I was not refrencing the correct thing. Javascript makes it really easy to use local storage data to keep record of whats happened.
 
+Simon-Service:
+The endpoints provided for the Simon web service exemplify the use of HTTP methods and conforming to RESTful API design. Additionally, the example code for calling third-party endpoints using fetch illustrates asynchronous programming and DOM manipulation. Understanding these concepts is crucial for building efficient and effective web applications that provide a good user experience. I've gained insights into best practices for web development, and ultimately can now create more robust and user-friendly applications.
+
 
 URL: http://3.12.97.31/
 ssh -i ~/Downloads/production.pem ubuntu@3.12.97.31
