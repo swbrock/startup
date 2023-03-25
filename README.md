@@ -38,6 +38,8 @@ Some things I learned from this is to just be careful to use the correct id name
 Simon-Service:
 The endpoints provided for the Simon web service exemplify the use of HTTP methods and conforming to RESTful API design. Additionally, the example code for calling third-party endpoints using fetch illustrates asynchronous programming and DOM manipulation. Understanding these concepts is crucial for building efficient and effective web applications that provide a good user experience. I've gained insights into best practices for web development, and ultimately can now create more robust and user-friendly applications.
 
+Simon-DB:
+Mongo DB uses a flexible document data model that maps naturally to JavaScript objects, making it easy to work with data in both languages. Additionally, MongoDB has a built-in driver for JavaScript, allowing developers to interact with the database directly from their JavaScript code without the need for a separate ORM or middleware.
 
 URL: http://3.12.97.31/
 ssh -i ~/Downloads/production.pem ubuntu@3.12.97.31
