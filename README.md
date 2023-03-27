@@ -41,5 +41,9 @@ The endpoints provided for the Simon web service exemplify the use of HTTP metho
 Simon-DB:
 Mongo DB uses a flexible document data model that maps naturally to JavaScript objects, making it easy to work with data in both languages. Additionally, MongoDB has a built-in driver for JavaScript, allowing developers to interact with the database directly from their JavaScript code without the need for a separate ORM or middleware.
 
+Simon-Login:
+It is cool to see how a web application implements user authentication and authorization using secure cookies and service endpoints. When a user logs in, logs out, or creates credentials, the service endpoints are called. The application uses a secure cookie to store the authorization token, and when a secure request is made, the cookie is checked. The service endpoints interact with the database to store and retrieve user credentials and update the authorization cookie. The secureApiRouter middleware function verifies the authorization cookie's validity before passing the request to endpoints that require authorization, making it easy to create secure endpoints. This concept highlights the importance of security configurations such as secure, httpOnly, and sameSite in setting the authorization cookie to protect it from attacks.
+
+
 URL: http://3.12.97.31/
 ssh -i ~/Downloads/production.pem ubuntu@3.12.97.31
