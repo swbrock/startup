@@ -45,5 +45,10 @@ Simon-Login:
 It is cool to see how a web application implements user authentication and authorization using secure cookies and service endpoints. When a user logs in, logs out, or creates credentials, the service endpoints are called. The application uses a secure cookie to store the authorization token, and when a secure request is made, the cookie is checked. The service endpoints interact with the database to store and retrieve user credentials and update the authorization cookie. The secureApiRouter middleware function verifies the authorization cookie's validity before passing the request to endpoints that require authorization, making it easy to create secure endpoints. This concept highlights the importance of security configurations such as secure, httpOnly, and sameSite in setting the authorization cookie to protect it from attacks.
 
 
+Simon-WebSocket:
+One cool thing about WebSockets is that they enable real-time communication between a client (usually a web browser) and a server, without the need for constant requests and responses. This allows for the development of interactive web applications that can provide instant updates to users, such as chat applications, real-time gaming, and collaborative editing tools.
+
+WebSockets also have a relatively low overhead compared to other real-time communication protocols, making them a great choice for applications that require high-performance and low-latency communication.
+
 URL: http://3.12.97.31/
 ssh -i ~/Downloads/production.pem ubuntu@3.12.97.31
