@@ -26,5 +26,24 @@ cp *.js dist
 cp package* dist
 
 # Step 2
+printf "\n----> clearing out previousdistribution on the target.\n"
+ssh -i "$key" ubuntu@$hostname << ENDSSH
+rm -rf services/${service}
+mkdir -p services/${service}
+ENDSSH
+
+#step 3
 printf "\n----> Copy the distribution package to the target.\n"
-ssh -i "$key" 
+scp -r -i "$key" dist/* ubuntu@$hostname:services/$service
+
+#step 4
+printf "\n----> deploy the service on the target.\n"
+ssh -i "$key" ubuntu@$hostname << ENDSSH
+cd services/${service}
+npm install
+pm2 restart ${service}
+ENDSSH
+
+#step 5
+printf "\n----> remove local copy of distribution package.\n"
+rm -rf dist
