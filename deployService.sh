@@ -18,12 +18,13 @@ fi
 printf "\n----> Deploying files for $service to $hostname with $key\n"
 
 # Step 1
-printf "\n----> Clear out the previous distribution on the target.\n"
-ssh -i "$key" ubuntu@$hostname << ENDSSH
-rm -rf services/${service}/public
-mkdir -p services/${service}/public
-ENDSSH
+printf "\n----> Build the distribution package.\n"
+rm -rf dist
+mkdir dist
+cp -r public dist
+cp *.js dist
+cp package* dist
 
 # Step 2
 printf "\n----> Copy the distribution package to the target.\n"
-scp -r -i "$key" * ubuntu@$hostname:services/$service/public
+ssh -i "$key" 

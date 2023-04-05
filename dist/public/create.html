@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Event Details</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+</head>
+<body>
+     <!-- Toolbar -->
+	<div class="toolbar">
+		<div class="left-links">
+			<a href="index.html">Home</a>
+			<a href="profile.html">Profile</a>
+			<a href="friends.html">Friends</a>
+		</div>
+		<div class="right-links">
+			<a href="#">Logout</a>
+		</div>
+	</div>
+
+	<!-- Sidebar -->
+	<div class="sidebar">
+		<ul>
+			<li><a href="create.html">Create Event</a></li>
+			<li><a href="yourWaal.html">Your Waal</a></li>
+			<li><a href="friendWaal.html">Friend Waal</a></li>
+			<li><a href="familyWaal.html">Family Waal</a></li>
+		</ul>
+	</div>
+        <div class="background-form">
+        <div class="form-title">
+            <h1>Create New Event</h1>
+        </div>
+        <form id="event-form">
+            <label for="title">Title:</label>
+            <input type="text" id="title" name="title"><br><br>
+    
+            <label for="start_date">Start Date:</label>
+            <input type="date" id="start_date" name="start_date"><br><br>
+    
+            <label for="end_date">End Date:</label>
+            <input type="date" id="end_date" name="end_date"><br><br>
+    
+            <label for="pictures">Add Pictures:</label>
+            <input type="file" id="pictures" name="pictures" multiple><br><br>
+    
+            <label for="videos">Add Videos:</label>
+            <input type="file" id="videos" name="videos" multiple><br><br>
+    
+            <label for="dummy_users">Select Users who can edit this event:</label>
+            <select id="dummy_users" name="dummy_users" multiple>
+                <option value="user1">User 1</option>
+                <option value="user2">User 2</option>
+                <option value="user3">User 3</option>
+                <option value="user4">User 4</option>
+            </select><br><br>
+    
+            <label for="options">Who can view this event:</label>
+            <select id="options" name="options">
+                <option value="friend">Friend</option>
+                <option value="family">Family</option>
+                <option value="all">All</option>
+            </select><br><br>
+    
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+<footer>
+    <div class="footer-container">
+      <div class="contact-info">
+        <p><i class="fas fa-envelope"></i> swbrockbank@gmail.com</p>
+        <p><i class="fas fa-phone"></i> 801-520-1280</p>
+        <p><i class="fas fa-map-marker-alt"></i> 1192 E Candy Lane, American Fork, Utah 84003</p>
+      </div>
+    </div>
+  </footer>
+  <script>
+    async function saveToLocalStorage(event) {
+      event.preventDefault(); // prevent default form submission
+      
+      // get form values
+      const title = document.getElementById("title").value;
+      const startDate = document.getElementById("start_date").value;
+      const endDate = document.getElementById("end_date").value;
+      const image_url = document.getElementById("pictures").value;
+      const video_url = document.getElementById("videos").value;
+      const users = document.getElementById("dummy_users").selectedOptions;
+      const options = document.getElementById("options").value;
+      
+      // create event object
+      const eventObj = {
+        title,
+        startDate,
+        endDate,
+        image_url,
+        video_url,
+        users: Array.from(users).map(user => user.value),
+        options
+      };
+      
+      // save event to local storage
+      let events = JSON.parse(localStorage.getItem("eventsPics")) || [];
+      events.push(eventObj);
+      localStorage.setItem("eventsPics", JSON.stringify(events));
+      console.log(events)
+      
+      // redirect to home page
+      window.location.href = "create.html";
+    }
+      
+    // add event listener to form submission
+    async function main() {
+      const form = document.querySelector("form");
+      await form.addEventListener("submit", saveToLocalStorage);
+    }
+  
+    main();    
+  </script>  
+</html>
+

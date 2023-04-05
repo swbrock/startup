@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>The Waal</title>
+	<link rel="stylesheet" type="text/css" href="index.css">
+	<script src="login.js"></script>
+	<script>
+		function login() {
+		  const nameEl = document.querySelector("#name");
+		  localStorage.setItem("userName", nameEl.value);
+		  window.location.href = "index.html";
+		}
+  
+		function logout() {
+		  localStorage.removeItem("userName");
+		  window.location.href = "login.html";
+		}
+  
+		function getUserName() {
+		  return localStorage.getItem("userName") ?? "Anonymous";
+		}
+  
+		//show logout button if user is logged in
+		if (getUserName() !== "Anonymous") {
+		  document.querySelector("#logout").style.display = "block";
+		}
+  
+		//show login button if user is logged out
+		if (getUserName() === "Anonymous") {
+		  document.querySelector("#login").style.display = "block";
+		}
+  
+		//show username if user is logged in
+		if (getUserName() !== "Anonymous") {
+		  document.querySelector("#username").innerHTML = getUserName();
+		}
+	  </script>
+</head>
+<body>
+	<!-- Toolbar -->
+	<div class="toolbar">
+		<div class="left-links">
+			<a href="index.html">Home</a>
+			<a href="profile.html">Profile</a>
+			<a href="friends.html">Friends</a>
+		</div>
+		<div class="right-links">
+			<span id="username"></span>
+			<script>
+				function getUserName() {
+					return localStorage.getItem("userName") ?? "Anonymous";
+				}
+			</script>
+			<button id="logout" style="display:none;" onclick="logout()">Logout</button>
+			<button id="login" style="display:none;" onclick="login()">Login</button>
+		  </div>
+	</div>
+
+	<!-- Sidebar -->
+	<div class="sidebar">
+		<ul>
+			<li><a href="create.html">Create Event</a></li>
+			<li><a href="yourWaal.html">Your Waal</a></li>
+			<li><a href="friendWaal.html">Friend Waal</a></li>
+			<li><a href="familyWaal.html">Family Waal</a></li>
+		</ul>
+	</div>
+
+	<!-- Main Content -->
+	<!-- <div class="main-content"> -->
+		<!-- Background image -->
+		<div class="background-image">
+			<h1>The Waal</h1>
+      		<form>
+        		<label for="name">Username:</label>
+        		<input type="text" id="name" name="name" />
+        		<button type="button" onclick="login()">Login</button>
+      		</form>
+            <div class="button-row">
+                <a href="yourWaal.html" class="button">Your Waal</a>
+                <a href="familyWaal.html" class="button">Family Waal</a>
+                <a href="friendWaal.html" class="button">Friend Waal</a>
+            </div>
+		</div>
+    <!-- </div> -->
+    </body>
+
+		<!-- Footer -->
+        <footer>
+            <div class="footer-container">
+              <div class="contact-info">
+                <p><i class="fas fa-envelope"></i> swbrockbank@gmail.com</p>
+                <p><i class="fas fa-phone"></i> 801-520-1280</p>
+                <p><i class="fas fa-map-marker-alt"></i> 1192 E Candy Lane, American Fork, Utah 84003</p>
+              </div>
+            </div>
+          </footer>
+	<!-- </div> -->
+</html>
