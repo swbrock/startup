@@ -4,7 +4,7 @@
   "description": "Elevator Pitch: Introducing a new way to stay connected with friends and family through video sharing! Our website allows you to easily upload and view videos of your loved ones, no matter where they are in the world. Everyone can add their experiences to keep memories alive. Never miss a moment with our user-friendly platform.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -18,6 +18,11 @@
   },
   "homepage": "https://github.com/swbrock/startup#readme",
   "dependencies": {
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "mongodb": "^5.2.0"
+  },
+  "devDependencies": {
+    "jest": "^29.5.0",
+    "supertest": "^6.3.3"
   }
 }
