@@ -3,7 +3,6 @@
 <head>
 	<title>The Waal</title>
 	<link rel="stylesheet" type="text/css" href="index.css">
-	<script src="login.js"></script>
 	<script>
 		function login() {
 		  const nameEl = document.querySelector("#name");
@@ -71,17 +70,70 @@
 		<!-- Background image -->
 		<div class="background-image">
 			<h1>The Waal</h1>
-      		<form>
-        		<label for="name">Username:</label>
-        		<input type="text" id="name" name="name" />
-        		<button type="button" onclick="login()">Login</button>
-      		</form>
-            <div class="button-row">
-                <a href="yourWaal.html" class="button">Your Waal</a>
-                <a href="familyWaal.html" class="button">Family Waal</a>
-                <a href="friendWaal.html" class="button">Friend Waal</a>
-            </div>
+      		<!-- Displayed when needing authentication -->
+			  <div id="loginControls" style="display: none">
+				<div class="input-group mb-3">
+				  <span class="input-group-text">@</span>
+				  <input
+					class="form-control"
+					type="text"
+					id="userName"
+					placeholder="your@email.com"
+				  />
+				</div>
+				<div class="input-group mb-3">
+				  <span class="input-group-text">🔒</span>
+				  <input
+					class="form-control"
+					type="password"
+					id="userPassword"
+					placeholder="password"
+				  />
+				</div>
+				<button type="button" class="btn btn-primary" onclick="loginUser()">
+				  Login
+				</button>
+				<button type="button" class="btn btn-primary" onclick="createUser()">
+				  Create
+				</button>
+			  </div>
+			  <!-- Displayed when ready to play -->
+			  <div id="playControls" style="display: none">
+				<div id="playerName"></div>
+				<button type="button" class="btn btn-primary" onclick="play()">
+				  Play
+				</button>
+				<button type="button" class="btn btn-secondary" onclick="logout()">
+				  Logout
+				</button>
+			  </div>
+			</div>
+	  
+			<!-- Error dialog -->
+			<div class="modal fade" id="msgModal" tabindex="-1">
+				<div class="modal-dialog modal-dialog-centered">
+					<div class="modal-content text-dark">
+						<div class="modal-body">error message here</div>
+				  		<div class="modal-footer">
+							<button
+					  		type="button"
+					  		class="btn btn-secondary"
+					  		data-bs-dismiss="modal"
+							>
+					  		Close
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="button-row">
+				<a href="yourWaal.html" class="button">Your Waal</a>
+				<a href="familyWaal.html" class="button">Family Waal</a>
+				<a href="friendWaal.html" class="button">Friend Waal</a>
+			</div>
 		</div>
+	<script src="login.js"></script>
+
     <!-- </div> -->
     </body>
 
