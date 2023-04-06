@@ -190,6 +190,14 @@ body {
     align-items: center;
     flex-direction: column;
   }
+
+  .picture-box {
+    height: calc(100px + 1em);
+    margin-bottom: 1em;
+    padding: .5em;
+    background: rgb(86, 89, 93);
+    border-radius: 5px;
+  }
   
   .profile-pic {
     width: 200px;
