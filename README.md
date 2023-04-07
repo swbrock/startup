@@ -50,5 +50,8 @@ One cool thing about WebSockets is that they enable real-time communication betw
 
 WebSockets also have a relatively low overhead compared to other real-time communication protocols, making them a great choice for applications that require high-performance and low-latency communication.
 
+Simon-React: 
+I really find the react components so useful and handy. They make the application so much more simple and just function way better I think. Components are reusable building blocks for UI elements. Components can be composed and nested to create complex user interfaces. JSX: React allows developers to write HTML-like syntax called JSX, which makes it easier to work with components and define the structure of the UI. Reactive updates: React uses a one-way data flow, where changes to the data are automatically reflected in the UI. This makes it easier to keep the UI in sync with the data.
+
 URL: http://3.12.97.31/
 ssh -i ~/Downloads/production.pem ubuntu@3.12.97.31
